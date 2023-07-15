@@ -1,9 +1,17 @@
-@import url('../../style/_variables.scss');
+// @import url('../../style/_variables.scss');
 .header {
     display: flex;
     height: 90px;
     padding: 15px;
     align-items: center;
+    &.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #230312;
+        z-index: 999;
+    }
     .nav-items {
         display: flex;
         align-items: center;

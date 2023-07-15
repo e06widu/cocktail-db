@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout renders Header component 1`] = `
+<div>
+  <header
+    class="header "
+    data-testid="header"
+  >
+    <div>
+      <img
+        alt="Logo"
+        src="/logo.png"
+      />
+    </div>
+    <div
+      class="nav-items"
+    >
+      <div
+        class="nav-item active"
+      >
+        Home
+      </div>
+      <div
+        class="nav-item "
+      >
+        Search
+      </div>
+      <div
+        class="nav-item "
+      >
+        Favorites 
+      </div>
+    </div>
+  </header>
+  <main
+    class="main"
+  >
+    <div
+      data-testid="child"
+    >
+      Child Component
+    </div>
+  </main>
+</div>
+`;

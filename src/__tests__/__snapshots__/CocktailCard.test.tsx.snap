@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CocktailCard matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="card-container"
+  >
+    <div>
+      Mojito
+    </div>
+    <img
+      alt="Mojito"
+      class="thumb-image"
+      loading="lazy"
+      src="mojito.jpg"
+    />
+    <div>
+      Cocktail
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -7,16 +7,16 @@ import Layout from '../../components/Layout';
 import Button from '../../components/Button';
 import LoadingSpinner from '../../components/LoadingSpinner';
 
-const useRandomCocktail = (): UseQueryResult<void | ICocktail[], Error> => {
-  return useQuery<void | ICocktail[], Error>({
-    queryKey: ['cocktail', 'random'],
-    queryFn: lookupMultipleRandomCocktail,
-    refetchOnWindowFocus: false,
-    // networkMode: 'always'
-  })
-}
-
 const Home: React.FC = () => {
+
+  const useRandomCocktail = (): UseQueryResult<void | ICocktail[], Error> => {
+    return useQuery<void | ICocktail[], Error>({
+      queryKey: ['cocktail', 'random'],
+      queryFn: lookupMultipleRandomCocktail,
+      refetchOnWindowFocus: false
+    })
+  }
+
   const { isLoading, data, error, refetch } = useRandomCocktail()
   let searchResult = <></>;
 

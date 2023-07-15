@@ -9,15 +9,28 @@ const Header: React.FC = () => {
   const { data: favorites } = useQuery<ICocktail[]>(['cocktail', 'favorites']);
   const navigate = useNavigate();
   const location = useLocation();
+  const [isHeaderFixed, setIsHeaderFixed] = useState(false);
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsHeaderFixed(window.pageYOffset > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const isActive = (path: string): boolean => {
     return location.pathname === path;
   };
 
   return (
-    <header className='header'>
+    <header data-testid="header" className={`header ${isHeaderFixed ? 'fixed' : ''}`}>
       <div>
-        <img src='/logo.png' />
+        <img src='/logo.png' alt="Logo" />
       </div>
       <div className='nav-items'>
         <div

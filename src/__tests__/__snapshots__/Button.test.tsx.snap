@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button calls the onClick function when clicked 1`] = `
+<button
+  class="custom-button "
+>
+  Click me
+</button>
+`;
+
+exports[`Button disables the button when disabled prop is true 1`] = `
+<button
+  class="custom-button disabled"
+  disabled=""
+>
+  Click me
+</button>
+`;
+
+exports[`Button renders the button correctly 1`] = `
+<button
+  class="custom-button "
+>
+  Click me
+</button>
+`;
+
+exports[`Button renders the icon when provided 1`] = `
+<span
+  data-testid="test-icon"
+>
+  Icon
+</span>
+`;

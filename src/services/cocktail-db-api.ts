@@ -45,13 +45,9 @@ export const lookupMultipleRandomCocktail = (): Promise<void | ICocktail[]> => {
             console.log(errors);
         });
 
-  
+
 };
 
-export const lookupSingleRandomCocktail = async (): Promise<IRandomCocktailResponse> => {
-    const res = await axiosInstance.get<IRandomCocktailResponse>(`/random.php`);
-    return res.data;
-};
 export const searchCocktailByName = async (name: string): Promise<ISearchCocktailResponse> => {
     const res = await axiosInstance.get<ISearchCocktailResponse>(`search.php?s=${name}`);
     return res.data;

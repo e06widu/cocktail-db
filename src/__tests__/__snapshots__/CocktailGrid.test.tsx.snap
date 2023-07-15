@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CocktailCard renders cocktail card 1`] = `
+<div
+  class="card-container"
+>
+  <div>
+    Mojito
+  </div>
+  <img
+    alt="Mojito"
+    class="thumb-image"
+    loading="lazy"
+  />
+  <div />
+</div>
+`;
