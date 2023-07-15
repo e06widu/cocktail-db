@@ -1,0 +1,9 @@
+@import "../../style/variables";
+.card-container {
+    border: 1px solid $white;
+    padding: 20px;
+    text-align: center;
+    .thumb-image {
+        width: 100%;
+    }
+}

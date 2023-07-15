@@ -1,0 +1,39 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* 4 items per row for desktop */
+    grid-gap: 20px;
+    /* spacing between grid items */
+    justify-items: center;
+    margin: 0 auto;
+    /* Center the grid horizontally */
+    // max-width: 600px;
+}
+
+.centered-item {
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 1024px) {
+    /* For tablets */
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+        /* 3 items per row for tablets */
+    }
+}
+
+@media (max-width: 767px) {
+    /* For small mobile devices */
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 items per row for small mobile devices */
+    }
+}
+
+@media (max-width: 479px) {
+    /* For tiny mobile devices */
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+        /* 1 item per row for tiny mobile devices */
+    }
+}

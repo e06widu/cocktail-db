@@ -1,0 +1,45 @@
+.custom-button {
+    padding: 5px 12px;
+    border-radius: 3px;
+    color: #fff;
+    line-height: 24px;
+    display: inline-block;
+    background-color: #c52d2f;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.custom-button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #fff;
+    transition: width 0.3s;
+}
+
+.custom-button:hover {
+    background-color: #ff5b5e;
+}
+
+.custom-button:hover::after {
+    width: 100%;
+}
+
+.custom-button:focus {
+    outline: none;
+}
+
+.custom-button:active {
+    transform: scale(0.95);
+    /* Add scale transform */
+}
+
+.custom-button:active::after {
+    width: 100%;
+}

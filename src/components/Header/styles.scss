@@ -1,0 +1,25 @@
+@import url('../../style/_variables.scss');
+.header {
+    display: flex;
+    height: 90px;
+    padding: 15px;
+    align-items: center;
+    .nav-items {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        .nav-item {
+            padding: 5px 12px;
+            margin-left: 15px;
+            border-radius: 3px;
+            color: #fff;
+            line-height: 24px;
+            display: inline-block;
+            background-color: transparent;
+            cursor: pointer;
+            &.active {
+                background-color: #c52d2f;
+            }
+        }
+    }
+}

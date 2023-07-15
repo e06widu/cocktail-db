@@ -1,0 +1,43 @@
+@import "./variables";
+
+/* Reset HTML5
+*/
+
+html,
+body,
+div {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    white-space: inherit;
+    text-decoration: none;
+    outline: none;
+    color: $white;
+    line-height: 22px;
+    background: $brown;
+}
+
+html {
+    min-height: 100%;
+    height: 100%;
+    white-space: normal;
+    caret-color: transparent;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+input {
+    height: 40px;
+}
