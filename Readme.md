@@ -36,4 +36,10 @@ App created using vite
 
 For fetching data I used axios and https://tanstack.com/query/v4 
 
+## Demo Video
+
+https://youtu.be/4ROmM_ua91M
+
+
+
 
