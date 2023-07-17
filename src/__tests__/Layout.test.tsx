@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 const queryClient = new QueryClient();
+jest.mock('../components/Header', () => () => <div data-testid="mocked-header">Mocked Header</div>);
 
 describe('Layout', () => {
     test('renders Header component', () => {
@@ -17,7 +18,6 @@ describe('Layout', () => {
           </QueryClientProvider>
         );
     
-        // Verify the rendered component matches the snapshot
         expect(container.firstChild).toMatchSnapshot();
       });
 });

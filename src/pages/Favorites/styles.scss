@@ -1,0 +1,12 @@
+@import "../../style/variables";
+
+.favorites {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.no-favorites, .all-removed {
+    font-style: italic;
+    color: $red;
+    font-size: 20px;
+    padding-top: 10px;
+  }

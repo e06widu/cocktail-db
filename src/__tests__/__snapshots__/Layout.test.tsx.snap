@@ -2,36 +2,11 @@
 
 exports[`Layout renders Header component 1`] = `
 <div>
-  <header
-    class="header "
-    data-testid="header"
+  <div
+    data-testid="mocked-header"
   >
-    <div>
-      <img
-        alt="Logo"
-        src="/logo.png"
-      />
-    </div>
-    <div
-      class="nav-items"
-    >
-      <div
-        class="nav-item active"
-      >
-        Home
-      </div>
-      <div
-        class="nav-item "
-      >
-        Search
-      </div>
-      <div
-        class="nav-item "
-      >
-        Favorites 
-      </div>
-    </div>
-  </header>
+    Mocked Header
+  </div>
   <main
     class="main"
   >

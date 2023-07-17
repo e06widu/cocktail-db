@@ -1,2 +1,18 @@
 @import "./reset";
 @import "./variables";
+.btn {
+    display: flex;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    .icon {
+        height: 30px;
+        width: 30px;
+        background-color: transparent;
+        padding: 5px;
+        margin-right: 10px;
+    }
+    .text {
+        background-color: transparent;
+    }
+}

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom';
-
+import { ReactComponent as FavIcon } from '../../images/favorite.svg';
 import './styles.scss'
 import { useQuery } from '@tanstack/react-query';
 import { ICocktail } from '../../models/ICocktail';
@@ -29,7 +29,7 @@ const Header: React.FC = () => {
 
   return (
     <header data-testid="header" className={`header ${isHeaderFixed ? 'fixed' : ''}`}>
-      <div>
+      <div className='logo-image'>
         <img src='/logo.png' alt="Logo" />
       </div>
       <div className='nav-items'>
@@ -49,7 +49,8 @@ const Header: React.FC = () => {
           className={`nav-item ${isActive('/favorites') ? 'active' : ''}`}
           onClick={() => navigate('/favorites')}
         >
-          Favorites {favorites?.length}
+          <FavIcon />
+          {favorites && <div className='fav-number'>{favorites?.length}</div> }
         </div>
       </div>
     </header>

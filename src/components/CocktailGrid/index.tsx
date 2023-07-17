@@ -17,7 +17,7 @@ const CocktailGrid: React.FC<CocktailGridProps> = ({ cocktails, mode }) => {
 
     const handleRemoveFromCart = (cocktail: ICocktail) => {
       
-        setToastMessage(`Cocktail ${cocktail.strDrink} Removed`);
+        setToastMessage(`Cocktail ${cocktail.strDrink} removed from favorites`);
         setShowToast(true);
     };
     return (

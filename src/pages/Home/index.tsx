@@ -6,6 +6,9 @@ import CocktailGrid from '../../components/CocktailGrid';
 import Layout from '../../components/Layout';
 import Button from '../../components/Button';
 import LoadingSpinner from '../../components/LoadingSpinner';
+import { ReactComponent as RefreshIcon } from '../../images/recycle.svg';
+
+import './styles.scss';
 
 const Home: React.FC = () => {
 
@@ -13,7 +16,8 @@ const Home: React.FC = () => {
     return useQuery<void | ICocktail[], Error>({
       queryKey: ['cocktail', 'random'],
       queryFn: lookupMultipleRandomCocktail,
-      refetchOnWindowFocus: false
+      refetchOnWindowFocus: false,
+      networkMode: 'always'
     })
   }
 
@@ -24,15 +28,15 @@ const Home: React.FC = () => {
     console.log('fetch')
     await refetch();
   }
-
+  // Fetching data
   if (isLoading) {
     searchResult = <LoadingSpinner />
   }
-
+  // Error when fetching data
   if (error instanceof Error) {
     searchResult = <span>Error: {error.message}</span>
   }
-
+  // Display data after fetch
   if (data) {
     searchResult = <div>
       <CocktailGrid cocktails={data} mode={'home'} />
@@ -43,9 +47,19 @@ const Home: React.FC = () => {
 
   return (
     <Layout>
-      <h1>Random Cocktails</h1>
-      <Button onClick={() => void refreshData()}>Refresh</Button>
-      {searchResult}
+      <div className='home'>
+        <h1>Random Cocktails</h1>
+        <div className='search-result'>
+          <div className='refresh-button'>
+            <Button onClick={() => void refreshData()}>
+              <div className='btn'>
+                <div className="icon"><RefreshIcon /></div>
+                <div className='text'>REFRESH</div>
+              </div></Button>
+          </div>
+          {searchResult}
+        </div>
+      </div>
     </Layout>
   )
 }

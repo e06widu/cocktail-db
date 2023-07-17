@@ -1,7 +1,7 @@
-// @import url('../../style/_variables.scss');
+@import "../../style/variables";
 .header {
     display: flex;
-    height: 90px;
+    height: 130px;
     padding: 15px;
     align-items: center;
     &.fixed {
@@ -9,7 +9,7 @@
         top: 0;
         left: 0;
         right: 0;
-        background-color: #230312;
+        background-color: $brown;
         z-index: 999;
     }
     .nav-items {
@@ -20,14 +20,87 @@
             padding: 5px 12px;
             margin-left: 15px;
             border-radius: 3px;
-            color: #fff;
+            color: $white;
             line-height: 24px;
             display: inline-block;
             background-color: transparent;
             cursor: pointer;
+            font-size: 18px;
+            letter-spacing: 0.2px;
+            display: flex;
+            align-items: center;
             &.active {
-                background-color: #c52d2f;
+                background-color: $red;
             }
+            &:hover {
+                background-color: $red;
+            }
+            .fav-number {
+                margin-left: 10px;
+                background-color: rgb(255, 119, 0);
+                width: 30px;
+                height: 30px;
+                padding: 5px;
+                text-align: center;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        .nav-items {
+            margin-left: 0;
+            .nav-item {
+                font-size: 16px;
+                .fav-number {
+                    width: 25px;
+                    height: 25px;
+                    padding: 3px;
+                }
+            }
+            .nav-item:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 540px) and (min-width: 481px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        .nav-items {
+            margin-left: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .header {
+        .logo-image {
+            img {
+                width: 100%;
+            }
+        }
+        .nav-items {
+            margin-left: 0;
+            .nav-item {
+                font-size: 14px;
+                padding: 2px 8px;
+                .fav-number {
+                    width: 20px;
+                    height: 20px;
+                    padding: 0px;
+                }
+            }
+        }
+        FavIcon {
+            width: 18px;
+            height: 18px;
         }
     }
 }

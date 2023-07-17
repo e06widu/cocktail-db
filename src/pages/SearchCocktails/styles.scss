@@ -1,0 +1,76 @@
+@import "../../style/variables";
+
+.search-flex {
+   display: flex;
+   margin-left: 25px;
+   margin-bottom: 25px;
+    input {
+        margin-right: 25px;
+        font-size: 16px;
+    }
+    input::placeholder {
+        font-size: 16px;
+        padding:  8px 10px;
+        letter-spacing: 0.2px;
+    }
+    Button {
+        margin-right: 15px;
+        font-size: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+   }
+   .search-result {
+    margin: 25px 25px 25px 0;
+   }
+   .search-message {
+    font-size: 16px;
+    padding-left: 25px;
+    padding-right: 25px;
+   }
+
+  .search-text {
+    margin-top: 10px;
+    font-size: 18px;
+  } 
+  .no-data {
+    font-style: italic;
+    color: $red;
+    font-size: 20px;
+    padding-top: 10px;
+  }
+
+  @media screen and (max-width: 480px) {
+    input {
+        height: 32px;
+        width: 50%;
+        font-size: 14px;
+    }
+    .search-flex {
+        Button {
+            height: 32px;
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .search-flex {
+        input {
+            margin-right: 15px;
+        }
+        input::placeholder {
+            font-size: 14px;
+            letter-spacing: 0.2px;
+        }
+        Button {
+            margin-right: 10px;
+            padding-left: 5px;
+            padding-right: 5px;
+            font-size: 14px;
+        }
+        .btn {
+            padding-top: 0;
+        }
+    }
+}
